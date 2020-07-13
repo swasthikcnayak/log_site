@@ -1,0 +1,12 @@
+<%- include("partials/header") -%>
+<h1 id="heading">My Logs</h1>
+<%  logList.forEach(function(Log) {%>
+<div class="container-fluid row">
+  <div class="row-header">
+    <p class="row-date"><%= Log.date %></p> 
+    <h2 class="row-title"><%= Log.title %> </h2>   
+  </div>
+  <p class="row-content"><%= Log.log %> </p>
+</div>
+
+<% }) %> <%- include("partials/footer") -%>

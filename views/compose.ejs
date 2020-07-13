@@ -1,0 +1,45 @@
+<%- include("partials/header") -%>
+<h1 id="heading">TODAY</h1>
+<form action="/compose" method="post">
+  <div class="form-row">
+    <div class="col-md-7 mt-2">
+      <label for="title">Title for the day</label>
+      <input
+        class="form-control"
+        type="text"
+        name="title"
+        autofocus
+        placeholder="Title for the day"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div class="col mt-2">
+      <label for="date">Date</label>
+      <input type="date" required class="form-control " name="date" />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-7 mt-2">
+      <label for="log">Log your day</label>
+      <textarea
+        name="log"
+        class="form-control"
+        cols="10"
+        rows="10"
+        placeholder="Log your day "
+      ></textarea>
+    </div>
+    <div class="col-12 mt-3">
+      <button
+        class="btn btn-primary btn-lg"
+        type="submit"
+        name="submit"
+        value="publish"
+      >
+        Publish
+      </button>
+    </div>
+  </div>
+</form>
+<%- include("partials/footer") -%>
